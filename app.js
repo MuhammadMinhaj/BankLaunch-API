@@ -7,9 +7,8 @@ const setMiddlewares = require("./middlewares");
 // Initialize app
 const app = express();
 const DB_URL =
-  "mongodb+srv://mdminhajctg:minhaj11@dream-softwares.dyvoa.mongodb.net/bank-website?retryWrites=true&w=majority";
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@dream-softwares.dyvoa.mongodb.net/bank-website?retryWrites=true&w=majority`;
 const PORT = 8080;
-
 
 // Set Middlewares
 setMiddlewares(app);
